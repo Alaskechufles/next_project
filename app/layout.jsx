@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import NavBar from '@/components/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,21 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={inter.className}>
-        <h1>Este es el indice</h1>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">about</Link>
-          </li>
-          <li>
-            <Link href="/services">Services</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
+        <NavBar />
         {children}
       </body>
     </html>
